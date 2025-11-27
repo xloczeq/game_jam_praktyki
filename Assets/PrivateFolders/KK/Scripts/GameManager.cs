@@ -2,14 +2,17 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public Card cardPrefab;
+    public TextMeshPro questionPrefab;
     public int numberOfCards = 3;
     public int hearts = 2;
 
-    public List<CardData> allCardData;   // Assign all Qxx objects here
+    public List<CardData> allCardData;
+    public List<QuestionText> allQuestions;// Assign all Qxx objects here
 
     private List<Card> spawnedCards = new List<Card>();
     private int currentStage = 1;
@@ -80,18 +83,25 @@ public class GameManager : MonoBehaviour
 
         int correctIndex = Random.Range(0, numberOfCards);
 
+        questionPrefab.SetText(
+                allQuestions.Find(q => q.stage == currentStage).displayText
+            );
+
         for (int i = 0; i < numberOfCards; i++)
         {
             Vector3 finalPos = new Vector3((i - 1) * 5, 0, 0);
+            
 
             // Slide in always from the right
             Vector3 startPos = finalPos + new Vector3(30f, 0, 0);
+            
 
             Card newCard = Instantiate(cardPrefab, finalPos, Quaternion.identity);
+            
 
             // TEXT + CORRECT/NONCORRECT
             CardData data = allCardData.Find(d => d.stage == currentStage && d.cardIndex == i + 1);
-            newCard.isCorrect = (i == Random.Range(0, numberOfCards)); // keep previous logic
+            newCard.isCorrect = data.isCorrect; // keep previous logic
             newCard.onCardSelected = OnCardSelected;
             newCard.SetText(data.displayText);
 
@@ -101,6 +111,7 @@ public class GameManager : MonoBehaviour
             anim.SlideInFrom(startPos);
 
             spawnedCards.Add(newCard);
+            
         }
 
 
@@ -141,7 +152,6 @@ public class GameManager : MonoBehaviour
     {
         foreach (Card c in spawnedCards)
             Destroy(c.gameObject);
-
         spawnedCards.Clear();
     }
 }
