@@ -16,3 +16,4 @@ MonoBehaviour:
   cardIndex: 1
   displayText: "Ewa \u2013 twierdzi, \u017Ce by\u0142a zaj\u0119ta archiwizowaniem
     dokument\xF3w, nie podchodzi\u0142a do paczek."
+  isCorrect: 1

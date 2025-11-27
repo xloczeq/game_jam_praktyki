@@ -16,4 +16,13 @@ public class Card : MonoBehaviour
     {
         onCardSelected?.Invoke(isCorrect);
     }
+
+    private void OnMouseEnter()
+    {
+        gameObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+    }
+    private void OnMouseExit()
+    {
+        gameObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+    }
 }
