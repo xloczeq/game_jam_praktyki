@@ -165,11 +165,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ff9ef188b8d8a34b9411589e2417026, type: 2}
   - {fileID: 11400000, guid: 623da8ac4736c5e41952848f68293f48, type: 2}
   - {fileID: 11400000, guid: 363b95136f19fa04f82bbd02f6cb5a74, type: 2}
+  - {fileID: 11400000, guid: f526cfced288cfc46b33452cc9045311, type: 2}
+  - {fileID: 11400000, guid: 72cdd30a80ca0c74da4bc1b306c9616a, type: 2}
+  - {fileID: 11400000, guid: 4dec88929edcd084cad2ec8e5d4da442, type: 2}
+  - {fileID: 11400000, guid: 52e864e2d80d8454580b837720213bfa, type: 2}
+  - {fileID: 11400000, guid: 29a0ccef3c9877442a308a7e4342949e, type: 2}
+  - {fileID: 11400000, guid: 3ac53dcdd1f25af439b044c3027887f0, type: 2}
   allQuestions:
-  - {fileID: 11400000, guid: 3ceab9eb4d5ff324387dbb543bf076d9, type: 2}
-  - {fileID: 11400000, guid: 6d43b342c245c3549b81c79bdaec9abb, type: 2}
-  - {fileID: 11400000, guid: 599c987b6eef4b34d91313b0cf5befc0, type: 2}
-  - {fileID: 11400000, guid: d123e490a00def84e8ed52bac8003eec, type: 2}
+  - {fileID: 11400000, guid: d00ce62b3caea5048a55d7a43445ce38, type: 2}
+  - {fileID: 11400000, guid: 3e2caf6e7d6c56544b91c4a0aa243100, type: 2}
+  - {fileID: 11400000, guid: 63989866793c68f45bb9e05e81aa9687, type: 2}
+  - {fileID: 11400000, guid: 7e7857ce5e58b2643bce2e089761f101, type: 2}
+  - {fileID: 11400000, guid: 37d11d1dd78c39a419300818f784e400, type: 2}
+  - {fileID: 11400000, guid: 2959bf9fac442644881720a3aa0726ff, type: 2}
   gameOverSceneName: GameOver
 --- !u!4 &388104735
 Transform:
@@ -462,8 +470,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 11.5
+  m_fontSizeBase: 11.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 4
   cardIndex: 3
-  displayText: "Kamil \u2013 twierdzi, \u017Ce przyszed\u0142 rano i zauwa\u017Cy\u0142
-    brak roweru, nie wie, kto zabra\u0142."
-  isCorrect: 1
+  displayText: "Twierdzi, \u017Ce przyszed\u0142 rano i zauwa\u017Cy\u0142 brak roweru,
+    nie wie, kto zabra\u0142."
+  characterName: Kamil
+  isCorrect: 0

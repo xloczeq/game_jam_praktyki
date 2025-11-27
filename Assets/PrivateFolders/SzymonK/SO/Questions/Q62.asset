@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 6
   cardIndex: 2
-  displayText: "Robert \u2013 m\xF3wi, \u017Ce widzia\u0142 Barbar\u0119 w pokoju
-    i niczego nie rusza\u0142a."
+  displayText: "M\xF3wi, \u017Ce widzia\u0142 Barbar\u0119 w pokoju i niczego nie
+    rusza\u0142a."
+  characterName: Robert
+  isCorrect: 0

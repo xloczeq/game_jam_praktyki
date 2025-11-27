@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 6
   cardIndex: 1
-  displayText: "Barbara \u2013 twierdzi, \u017Ce by\u0142a w pokoju obok i zajmowa\u0142a
-    si\u0119 telefonami."
+  displayText: "Twierdzi, \u017Ce by\u0142a w pokoju obok i zajmowa\u0142a si\u0119
+    telefonami."
+  characterName: Barbara
+  isCorrect: 0

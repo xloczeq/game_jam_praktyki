@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   cardIndex: 2
-  displayText: "Ania \u2013 m\xF3wi, \u017Ce widzia\u0142a Tomka przy komputerze,
-    a sama wysz\u0142a po 10 minutach."
-  isCorrect: 1
+  displayText: "M\xF3wi, \u017Ce widzia\u0142a Tomka przy komputerze, a sama wysz\u0142a
+    po 10 minutach."
+  characterName: Ania
+  isCorrect: 0

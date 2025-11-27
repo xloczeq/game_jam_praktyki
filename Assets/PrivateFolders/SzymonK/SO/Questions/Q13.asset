@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   cardIndex: 3
-  displayText: "Kasia \u2013 m\xF3wi, \u017Ce przysz\u0142a zaraz po treningu i widzia\u0142a
+  displayText: "M\xF3wi, \u017Ce przysz\u0142a zaraz po treningu i widzia\u0142a
     Micha\u0142a w szatni, ale nie zauwa\u017Cy\u0142a niczego podejrzanego."
+  characterName: Kasia
+  isCorrect: 0

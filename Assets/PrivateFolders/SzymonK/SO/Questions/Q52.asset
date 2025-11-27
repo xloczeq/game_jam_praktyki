@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 5
   cardIndex: 2
-  displayText: "Dawid \u2013 m\xF3wi, \u017Ce wyszed\u0142 po kaw\u0119 i nie dotyka\u0142
-    stolika."
+  displayText: "M\xF3wi, \u017Ce wyszed\u0142 po kaw\u0119 i nie dotyka\u0142 stolika."
+  characterName: Dawid
+  isCorrect: 0

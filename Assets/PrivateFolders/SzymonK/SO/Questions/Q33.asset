@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 3
   cardIndex: 3
-  displayText: "Ola \u2013 m\xF3wi, \u017Ce widzia\u0142a Ew\u0119 przy archiwum
-    i Marka rozmawiaj\u0105cego, ale niczego podejrzanego nie zauwa\u017Cy\u0142a."
+  displayText: "M\xF3wi, \u017Ce widzia\u0142a Ew\u0119 przy archiwum i Marka rozmawiaj\u0105cego,
+    ale niczego podejrzanego nie zauwa\u017Cy\u0142a."
+  characterName: Ola
+  isCorrect: 0
