@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
             newCard.isCorrect = data.isCorrect; // keep previous logic
             newCard.onCardSelected = OnCardSelected;
             newCard.SetText(data.displayText);
+            newCard.SetName(data.characterName);
 
             // Animate in
             CardAnimator anim = newCard.GetComponent<CardAnimator>();
