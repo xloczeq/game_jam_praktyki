@@ -151,6 +151,16 @@ MonoBehaviour:
   cardPrefab: {fileID: 53790137341612168, guid: 259696c15d4c1c34fbe7735f1f6821b8, type: 3}
   numberOfCards: 3
   hearts: 2
+  allCardData:
+  - {fileID: 11400000, guid: 61da659dbbc54e04a88743c9174b4317, type: 2}
+  - {fileID: 11400000, guid: 880ed452dfb09a34a8671f9e47c3e68a, type: 2}
+  - {fileID: 11400000, guid: 3dc5280e2c79ecb458d70ca581b0b6f3, type: 2}
+  - {fileID: 11400000, guid: f8e9964a31c824844a357105b614e568, type: 2}
+  - {fileID: 11400000, guid: 891e63a7b5d364d45b8ed99f70c65dec, type: 2}
+  - {fileID: 11400000, guid: 01986e83df146c04c86ca1d076797057, type: 2}
+  - {fileID: 11400000, guid: 5d1af8f1234b12d4f8a56c074438f836, type: 2}
+  - {fileID: 11400000, guid: ce893302383f5ae43aafbef1ed90a1f7, type: 2}
+  - {fileID: 11400000, guid: 291c8eca1f77d124eb068fa241762fc4, type: 2}
 --- !u!4 &388104735
 Transform:
   m_ObjectHideFlags: 0
@@ -285,7 +295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &585914921
 MeshCollider:
   m_ObjectHideFlags: 0

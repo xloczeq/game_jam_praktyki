@@ -1,13 +1,20 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Card cardPrefab;          // Assign in Inspector
+    public Card cardPrefab;
     public int numberOfCards = 3;
     public int hearts = 2;
 
+    public List<CardData> allCardData;   // Assign all Qxx objects here
+
     private List<Card> spawnedCards = new List<Card>();
+    private int currentStage = 1;
+
+    public string gameOverSceneName = "GameOverScene";
 
     void Start()
     {
@@ -18,17 +25,20 @@ public class GameManager : MonoBehaviour
     {
         ClearOldCards();
 
-        // Randomly pick 1 correct card index
         int correctIndex = Random.Range(0, numberOfCards);
 
         for (int i = 0; i < numberOfCards; i++)
         {
-            Card newCard = Instantiate(cardPrefab, new Vector3((i - 1) * 5, 0, -1), Quaternion.identity);
+            Card newCard = Instantiate(cardPrefab, new Vector3((i-1) * 5, 0, -1), Quaternion.identity);
 
-            // mark which one is correct
+            // correct card index
             newCard.isCorrect = (i == correctIndex);
 
-            // subscribe to the card click event
+            // ---- LOAD SCRIPTABLE OBJECT TEXT BASED ON STAGE + CARD NUMBER ----
+            CardData data = allCardData.First(d => d.stage == currentStage && d.cardIndex == i + 1);
+
+            newCard.SetText(data.displayText);
+
             newCard.onCardSelected = OnCardSelected;
 
             spawnedCards.Add(newCard);
@@ -39,8 +49,9 @@ public class GameManager : MonoBehaviour
     {
         if (isCorrect)
         {
-            Debug.Log("Correct! Next stage.");
-            GenerateStage(); // go to next
+            Debug.Log("Correct!");
+            currentStage++;     // move to next stage
+            GenerateStage();
         }
         else
         {
@@ -50,10 +61,11 @@ public class GameManager : MonoBehaviour
             if (hearts <= 0)
             {
                 Debug.Log("Game Over!");
-                // Stop the game or reset hearts; you decide
+                SceneManager.LoadSceneAsync(gameOverSceneName);
                 return;
             }
 
+            currentStage++;      // <--- ADVANCE STAGE EVEN ON WRONG ANSWER
             GenerateStage();
         }
     }
