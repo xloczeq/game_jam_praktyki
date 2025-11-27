@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 4
   cardIndex: 2
-  displayText: "Magda \u2013 m\xF3wi, \u017Ce widzia\u0142a Piotra rano przy rowerach,
-    wszystkie by\u0142y na miejscu."
+  displayText: "M\xF3wi, \u017Ce widzia\u0142a Piotra rano przy rowerach, wszystkie
+    by\u0142y na miejscu."
+  characterName: Magda
+  isCorrect: 0

@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 6
   cardIndex: 3
-  displayText: "Adam \u2013 twierdzi, \u017Ce przyszed\u0142 po Barbarze, dokumenty
-    by\u0142y ju\u017C znikni\u0119te."
+  displayText: "Twierdzi, \u017Ce przyszed\u0142 po Barbarze, dokumenty by\u0142y
+    ju\u017C znikni\u0119te."
+  characterName: Adam
+  isCorrect: 1

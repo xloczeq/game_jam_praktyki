@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   cardIndex: 3
-  displayText: "\u0141ukasz \u2013 twierdzi, \u017Ce przyszed\u0142 po Ani i nie
-    widzia\u0142 niczego podejrzanego."
+  displayText: "Twierdzi, \u017Ce przyszed\u0142 po Ani i nie widzia\u0142 niczego
+    podejrzanego."
+  characterName: "\u0141ukasz"
+  isCorrect: 1

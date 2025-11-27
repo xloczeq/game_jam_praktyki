@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 5
   cardIndex: 3
-  displayText: "Oskar \u2013 twierdzi, \u017Ce przy stoliku siedzia\u0142a Kinga
-    i Dawid, a sam przechodzi\u0142 obok."
+  displayText: "Twierdzi, \u017Ce przy stoliku siedzia\u0142a Kinga i Dawid, a sam
+    przechodzi\u0142 obok."
+  characterName: Oskar
+  isCorrect: 0

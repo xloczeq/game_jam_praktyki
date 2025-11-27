@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 5
   cardIndex: 1
-  displayText: "Kinga \u2013 twierdzi, \u017Ce siedzia\u0142a obok stolika i niczego
-    nie widzia\u0142a."
+  displayText: "Twierdzi, \u017Ce siedzia\u0142a obok stolika i niczego nie widzia\u0142a."
+  characterName: Kinga
+  isCorrect: 1

@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   cardIndex: 2
-  displayText: "Micha\u0142 \u2013 m\xF3wi, \u017Ce by\u0142 w szatni ca\u0142y czas,
-    zmienia\u0142 buty i rozmawia\u0142 z kolegami."
+  displayText: "M\xF3wi, \u017Ce by\u0142 w szatni ca\u0142y czas, zmienia\u0142
+    buty i rozmawia\u0142 z kolegami."
+  characterName: "Micha\u0142"
+  isCorrect: 0

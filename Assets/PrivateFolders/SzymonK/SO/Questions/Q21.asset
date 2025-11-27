@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   cardIndex: 1
-  displayText: "Tomek \u2013 twierdzi, \u017Ce by\u0142 w komputerowni od pocz\u0105tku
-    do ko\u0144ca, nie wychodzi\u0142."
+  displayText: "Twierdzi, \u017Ce by\u0142 w komputerowni od pocz\u0105tku do ko\u0144ca,
+    nie wychodzi\u0142."
+  characterName: Tomek
+  isCorrect: 0

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   cardIndex: 1
-  displayText: "Sandra \u2013 twierdzi, \u017Ce przysz\u0142a ostatnia do szatni."
+  displayText: "Twierdzi, \u017Ce przysz\u0142a ostatnia do szatni."
+  characterName: Sandra
   isCorrect: 1

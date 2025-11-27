@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 4
   cardIndex: 1
-  displayText: "Piotr \u2013 twierdzi, \u017Ce spa\u0142 w pokoju i nie wstawa\u0142
-    w nocy."
+  displayText: "Twierdzi, \u017Ce spa\u0142 w pokoju i nie wstawa\u0142 w nocy."
+  characterName: Piotr
+  isCorrect: 1
