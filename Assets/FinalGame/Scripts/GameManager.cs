@@ -1,8 +1,9 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class GameManager : MonoBehaviour
     public int numberOfCards = 3;
     public int hearts = 2;
     public HeartsUI heartsUI;
+
+    // correct and wrong answers sound
+    public AudioSource audioSource;
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
 
 
     public List<CardData> allCardData;
@@ -29,6 +35,24 @@ public class GameManager : MonoBehaviour
         StageTracker.stagesCompleted = 0;  // reset
         GenerateStage();
         heartsUI.InitializeHearts(hearts);
+    }
+
+    private IEnumerator GameOverRoutine()
+    {
+        audioSource.PlayOneShot(wrongSound);
+
+        yield return new WaitForSeconds(0.5f); // wait time
+
+        SceneManager.LoadScene(gameOverSceneName);
+    }
+
+    private IEnumerator VictoryRoutine()
+    {
+        audioSource.PlayOneShot(correctSound);
+
+        yield return new WaitForSeconds(0.5f); // wait time
+
+        SceneManager.LoadScene(victorySceneName);
     }
 
     bool StageHasData(int stage)
@@ -129,13 +153,23 @@ public class GameManager : MonoBehaviour
         // Count this stage as completed
         if (isCorrect)
         {
+            audioSource.PlayOneShot(correctSound);
             //Debug.Log("Correct!");
             currentStage++;
             StageTracker.stagesCompleted++;
+
+            // sprawdzanie czy sa stage
+            if (!StageHasData(currentStage))
+            {
+                StartCoroutine(VictoryRoutine());
+                return;
+            }
+
             GenerateStage();
         }
         else
         {
+            audioSource.PlayOneShot(wrongSound);
             hearts--;
             heartsUI.LoseHeart();
 
@@ -144,7 +178,7 @@ public class GameManager : MonoBehaviour
             if (hearts <= 0)
             {
                 //Debug.Log("Game Over!");
-                SceneManager.LoadScene(gameOverSceneName);
+                StartCoroutine(GameOverRoutine());
                 return;
             }
 
