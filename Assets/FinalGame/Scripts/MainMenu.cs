@@ -13,9 +13,4 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void HowToPlay()
-    {
-        SceneManager.LoadSceneAsync("HowToPlay");
-    }
-
 }

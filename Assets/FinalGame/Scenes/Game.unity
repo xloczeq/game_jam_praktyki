@@ -172,6 +172,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 52e864e2d80d8454580b837720213bfa, type: 2}
   - {fileID: 11400000, guid: 29a0ccef3c9877442a308a7e4342949e, type: 2}
   - {fileID: 11400000, guid: 3ac53dcdd1f25af439b044c3027887f0, type: 2}
+  - {fileID: 11400000, guid: f4f15a8e146bebc49bba5818a73dcb5f, type: 2}
+  - {fileID: 11400000, guid: e5ecc6cc04f057d4c964059ec30090d6, type: 2}
+  - {fileID: 11400000, guid: d0bdf614a0f90704ba61dfd4eafdf446, type: 2}
+  - {fileID: 11400000, guid: e598d598caa91a543aa81f5e66483a1f, type: 2}
+  - {fileID: 11400000, guid: 843cfd826b0fc714d9d77e98e497070a, type: 2}
+  - {fileID: 11400000, guid: a0d0ab43aee72dc4fbd16b9f2dd69b09, type: 2}
+  - {fileID: 11400000, guid: 704b03bb8c04ac74a9ea4f9472a5a462, type: 2}
+  - {fileID: 11400000, guid: fe70c043d833ae249a9a640e0bbc3b5c, type: 2}
+  - {fileID: 11400000, guid: 303847c8547e55c4ea200058c6e6e241, type: 2}
   allQuestions:
   - {fileID: 11400000, guid: d00ce62b3caea5048a55d7a43445ce38, type: 2}
   - {fileID: 11400000, guid: 3e2caf6e7d6c56544b91c4a0aa243100, type: 2}
@@ -179,6 +188,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7e7857ce5e58b2643bce2e089761f101, type: 2}
   - {fileID: 11400000, guid: 37d11d1dd78c39a419300818f784e400, type: 2}
   - {fileID: 11400000, guid: 2959bf9fac442644881720a3aa0726ff, type: 2}
+  - {fileID: 11400000, guid: c2b62144708aafd4da680bbb0482a7a7, type: 2}
+  - {fileID: 11400000, guid: 61f1d3229ff560d4ba87ffaf4c201a61, type: 2}
+  - {fileID: 11400000, guid: 1a224b81c5ffd6c4aad53ba304a223bf, type: 2}
   gameOverSceneName: GameOver
   victorySceneName: Victory
 --- !u!4 &388104735
@@ -682,7 +694,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.9, y: 1.78}
+  m_Size: {x: 3.62, y: 3.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1160,7 +1172,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.9, y: 1.78}
+  m_Size: {x: 3.62, y: 3.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
