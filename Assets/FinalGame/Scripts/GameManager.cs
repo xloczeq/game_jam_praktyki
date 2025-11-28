@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public TextMeshPro questionPrefab;
     public int numberOfCards = 3;
     public int hearts = 2;
+    public HeartsUI heartsUI;
 
-    public GameObject heart2;
 
     public List<CardData> allCardData;
     public List<QuestionText> allQuestions;// Assign all Qxx objects here
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         StageTracker.stagesCompleted = 0;  // reset
         GenerateStage();
+        heartsUI.InitializeHearts(hearts);
     }
 
     bool StageHasData(int stage)
@@ -135,16 +136,15 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(heart2);
             hearts--;
-            
+            heartsUI.LoseHeart();
+
             //Debug.Log("Wrong! Hearts left: " + hearts);
 
             if (hearts <= 0)
             {
                 //Debug.Log("Game Over!");
                 SceneManager.LoadScene(gameOverSceneName);
-
                 return;
             }
 

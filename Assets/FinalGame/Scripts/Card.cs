@@ -5,13 +5,37 @@ public class Card : MonoBehaviour
 {
     public bool isCorrect = false;
     public System.Action<bool> onCardSelected;
+
     public TextMeshPro textDisplay;
     public TextMeshPro nameDisplay;
+
+    // --- SCALE ANIMATION ---
+    private Vector3 targetScale;
+    private Vector3 normalScale = new Vector3(0.7f, 0.7f, 0.7f);
+    private Vector3 hoverScale = new Vector3(0.85f, 0.85f, 0.85f);
+    public float scaleSpeed = 10f;
+
+    void Start()
+    {
+        targetScale = normalScale;
+        transform.localScale = normalScale;
+    }
+
+    void Update()
+    {
+        // Plynne przejscie skali
+        transform.localScale = Vector3.Lerp(
+            transform.localScale,
+            targetScale,
+            Time.deltaTime * scaleSpeed
+        );
+    }
 
     public void SetText(string text)
     {
         textDisplay.text = text;
     }
+
     public void SetName(string text)
     {
         nameDisplay.text = text;
@@ -24,10 +48,11 @@ public class Card : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        gameObject.transform.localScale = new Vector3(0.95f, 0.95f, 0.95f);
+        targetScale = hoverScale;
     }
+
     private void OnMouseExit()
     {
-        gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        targetScale = normalScale;
     }
 }
