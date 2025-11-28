@@ -133,6 +133,7 @@ public class GameManager : MonoBehaviour
             newCard.onCardSelected = OnCardSelected;
             newCard.SetText(data.displayText);
             newCard.SetName(data.characterName);
+            newCard.SetPortrait(data.characterPortrait);
 
             // Animate in
             CardAnimator anim = newCard.GetComponent<CardAnimator>();

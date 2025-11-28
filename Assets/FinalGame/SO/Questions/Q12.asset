@@ -18,3 +18,4 @@ MonoBehaviour:
     buty i rozmawia\u0142 z kolegami."
   characterName: "Micha\u0142"
   isCorrect: 0
+  characterPortrait: {fileID: 7152930139536384079, guid: 4862018bb132bf14bb6948dc4155e5f8, type: 3}

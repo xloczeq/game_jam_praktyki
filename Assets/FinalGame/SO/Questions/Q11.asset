@@ -16,4 +16,6 @@ MonoBehaviour:
   cardIndex: 1
   displayText: "Twierdzi, \u017Ce przysz\u0142a ostatnia do szatni."
   characterName: Sandra
+  line: "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
   isCorrect: 1
+  characterPortrait: {fileID: 7152930139536384079, guid: 4862018bb132bf14bb6948dc4155e5f8, type: 3}

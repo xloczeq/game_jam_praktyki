@@ -8,6 +8,7 @@ public class Card : MonoBehaviour
 
     public TextMeshPro textDisplay;
     public TextMeshPro nameDisplay;
+    public UnityEngine.UI.Image portraitDisplay;
 
     // --- SCALE ANIMATION ---
     private Vector3 targetScale;
@@ -39,6 +40,11 @@ public class Card : MonoBehaviour
     public void SetName(string text)
     {
         nameDisplay.text = text;
+    }
+
+    public void SetPortrait(Sprite sprite)
+    {
+        portraitDisplay.sprite = sprite;
     }
 
     private void OnMouseDown()

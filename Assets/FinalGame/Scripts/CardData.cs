@@ -8,4 +8,5 @@ public class CardData : ScriptableObject
     public string displayText;
     public string characterName;
     public bool isCorrect;
+    public Sprite characterPortrait;
 }
