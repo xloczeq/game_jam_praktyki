@@ -18,3 +18,4 @@ MonoBehaviour:
     rusza\u0142a."
   characterName: Robert
   isCorrect: 0
+  characterPortrait: {fileID: 6083806894379148034, guid: 25dbbcafd228e994b879e9a59a697f87, type: 3}

@@ -17,3 +17,4 @@ MonoBehaviour:
   displayText: "Twierdzi, \u017Ce siedzia\u0142a obok stolika i niczego nie widzia\u0142a."
   characterName: Kinga
   isCorrect: 1
+  characterPortrait: {fileID: -8951686699017181974, guid: d10cfff9468e61649859cf532d6597cc, type: 3}

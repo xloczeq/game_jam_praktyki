@@ -18,3 +18,4 @@ MonoBehaviour:
     chwil\u0119 po przerwie."
   characterName: Sylwia
   isCorrect: 0
+  characterPortrait: {fileID: -435397851939694273, guid: 652450d04893a8c4da3b56de518e23b3, type: 3}

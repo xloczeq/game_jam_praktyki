@@ -17,3 +17,4 @@ MonoBehaviour:
   displayText: "M\xF3wi, \u017Ce wyszed\u0142 po kaw\u0119 i nie dotyka\u0142 stolika."
   characterName: Dawid
   isCorrect: 0
+  characterPortrait: {fileID: -8951383523087240050, guid: 2392264ab18a0a241a45ccd847ff8253, type: 3}

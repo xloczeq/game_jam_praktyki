@@ -18,3 +18,4 @@ MonoBehaviour:
     podejrzanego."
   characterName: "\u0141ukasz"
   isCorrect: 1
+  characterPortrait: {fileID: 1931235430270329113, guid: 50e9f6cf95bd6ac4099281d707c10086, type: 3}

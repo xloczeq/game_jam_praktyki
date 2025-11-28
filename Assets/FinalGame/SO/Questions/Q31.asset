@@ -18,3 +18,4 @@ MonoBehaviour:
     nie podchodzi\u0142a do paczek."
   characterName: Ewa
   isCorrect: 1
+  characterPortrait: {fileID: -6749112053895511347, guid: 90cd19218d3f6df4d8287b6991cb8861, type: 3}

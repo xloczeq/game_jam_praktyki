@@ -18,3 +18,4 @@ MonoBehaviour:
     ju\u017C znikni\u0119te."
   characterName: Adam
   isCorrect: 1
+  characterPortrait: {fileID: 9046443041724372418, guid: 30b4f475500e00d438d79ba204bd06a2, type: 3}

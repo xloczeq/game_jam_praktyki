@@ -18,3 +18,4 @@ MonoBehaviour:
     ale niczego podejrzanego nie zauwa\u017Cy\u0142a."
   characterName: Ola
   isCorrect: 0
+  characterPortrait: {fileID: -435397851939694273, guid: 652450d04893a8c4da3b56de518e23b3, type: 3}

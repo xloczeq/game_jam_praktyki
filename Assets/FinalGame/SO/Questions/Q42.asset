@@ -18,3 +18,4 @@ MonoBehaviour:
     by\u0142y na miejscu."
   characterName: Magda
   isCorrect: 0
+  characterPortrait: {fileID: 8821616558950248791, guid: 0162220f6a3a29d45ad8474afecae7fe, type: 3}

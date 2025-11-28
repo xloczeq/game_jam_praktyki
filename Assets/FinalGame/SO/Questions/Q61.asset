@@ -18,3 +18,4 @@ MonoBehaviour:
     telefonami."
   characterName: Barbara
   isCorrect: 0
+  characterPortrait: {fileID: -2382210453169407900, guid: 9d271c9b4c1fc2d47ae762b2bea2e9bc, type: 3}

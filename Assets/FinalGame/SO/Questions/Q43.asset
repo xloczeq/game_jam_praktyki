@@ -18,3 +18,4 @@ MonoBehaviour:
     nie wie, kto zabra\u0142."
   characterName: Kamil
   isCorrect: 0
+  characterPortrait: {fileID: 1931235430270329113, guid: 50e9f6cf95bd6ac4099281d707c10086, type: 3}

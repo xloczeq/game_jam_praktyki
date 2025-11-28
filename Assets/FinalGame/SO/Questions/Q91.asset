@@ -17,3 +17,4 @@ MonoBehaviour:
   displayText: "M\xF3wi, \u017Ce wysz\u0142a po kaw\u0119."
   characterName: Klara
   isCorrect: 0
+  characterPortrait: {fileID: -435397851939694273, guid: 652450d04893a8c4da3b56de518e23b3, type: 3}

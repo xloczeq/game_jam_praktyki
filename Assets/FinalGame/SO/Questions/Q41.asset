@@ -17,3 +17,4 @@ MonoBehaviour:
   displayText: "Twierdzi, \u017Ce spa\u0142 w pokoju i nie wstawa\u0142 w nocy."
   characterName: Piotr
   isCorrect: 1
+  characterPortrait: {fileID: 6083806894379148034, guid: 25dbbcafd228e994b879e9a59a697f87, type: 3}
