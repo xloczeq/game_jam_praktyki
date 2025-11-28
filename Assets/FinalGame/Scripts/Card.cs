@@ -24,10 +24,10 @@ public class Card : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        gameObject.transform.localScale = new Vector3(3.3f, 3.3f, 3.3f);
+        gameObject.transform.localScale = new Vector3(0.95f, 0.95f, 0.95f);
     }
     private void OnMouseExit()
     {
-        gameObject.transform.localScale = new Vector3(3f, 3f, 3f);
+        gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
     }
 }
