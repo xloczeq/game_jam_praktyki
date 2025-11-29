@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public int hearts = 2;
     public HeartsUI heartsUI;
 
-    // correct and wrong answers sound
     public AudioSource audioSource;
     public AudioClip correctSound;
     public AudioClip wrongSound;
@@ -24,35 +23,34 @@ public class GameManager : MonoBehaviour
     public List<QuestionText> allQuestions;// Assign all Qxx objects here
 
     private List<Card> spawnedCards = new List<Card>();
-    private int currentStage = 1;
+    private bool isAnimatingStage = false;
+
+    private List<int> availableStages = new List<int>();
+    private int currentStage;
 
     public string gameOverSceneName = "GameOver";
     public string victorySceneName = "Victory";
-    private bool isAnimatingStage = false;
-
 
     void Start()
     {
-        StageTracker.stagesCompleted = 0;  // reset
-        GenerateStage();
+        availableStages = allCardData.Select(d => d.stage).Distinct().ToList();
+
+        StageTracker.stagesCompleted = 0;
         heartsUI.InitializeHearts(hearts);
+        GenerateStage();
     }
 
     private IEnumerator GameOverRoutine()
     {
         audioSource.PlayOneShot(wrongSound);
-
-        yield return new WaitForSeconds(0.5f); // wait time
-
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(gameOverSceneName);
     }
 
     private IEnumerator VictoryRoutine()
     {
         audioSource.PlayOneShot(correctSound);
-
-        yield return new WaitForSeconds(0.5f); // wait time
-
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(victorySceneName);
     }
 
@@ -61,7 +59,6 @@ public class GameManager : MonoBehaviour
         // Checks if ANY CardData exists for this stage
         return allCardData.Exists(d => d.stage == stage);
     }
-
 
     void GenerateStage()
     {
@@ -84,7 +81,6 @@ public class GameManager : MonoBehaviour
                 anim.SlideOutTo(exitPos, () =>
                 {
                     cardsExited++;
-
                     if (cardsExited >= cardsToExit)
                     {
                         ClearOldCards();
@@ -97,40 +93,46 @@ public class GameManager : MonoBehaviour
         {
             SpawnNewStageCards();
         }
-
     }
 
     void SpawnNewStageCards()
     {
         // No more scriptable objects for this stage -> game over
-        if (!StageHasData(currentStage))
+        if (availableStages.Count == 0)
         {
-            //Debug.Log("No more stages! Game Over.");
             SceneManager.LoadScene(victorySceneName);
             return;
         }
 
-        int correctIndex = Random.Range(0, numberOfCards);
+        // Random stage
+        int randomStageIndex = Random.Range(0, availableStages.Count);
+        currentStage = availableStages[randomStageIndex];
+        // Delete if you don't want stage replays:
+        availableStages.RemoveAt(randomStageIndex);
 
-        questionPrefab.SetText(
-                allQuestions.Find(q => q.stage == currentStage).displayText
-            );
+        // Set question
+        QuestionText q = allQuestions.Find(x => x.stage == currentStage);
+        if (q != null) questionPrefab.SetText(q.displayText);
 
-        for (int i = 0; i < numberOfCards; i++)
+        // Draw all cards for this stage
+        List<CardData> stageCards = allCardData
+            .Where(d => d.stage == currentStage)
+            .OrderBy(x => Random.value) // random order of cards
+            .Take(numberOfCards)
+            .ToList();
+
+        for (int i = 0; i < stageCards.Count; i++)
         {
             Vector3 finalPos = new Vector3((i - 1) * 5, 0, 0);
-            
 
             // Slide in always from the right
             Vector3 startPos = finalPos + new Vector3(30f, 0, 0);
-            
 
             Card newCard = Instantiate(cardPrefab, finalPos, Quaternion.identity);
-            
 
             // TEXT + CORRECT/NONCORRECT
-            CardData data = allCardData.Find(d => d.stage == currentStage && d.cardIndex == i + 1);
-            newCard.isCorrect = data.isCorrect; // keep previous logic
+            CardData data = stageCards[i];
+            newCard.isCorrect = data.isCorrect;
             newCard.onCardSelected = OnCardSelected;
             newCard.SetText(data.displayText);
             newCard.SetName(data.characterName);
@@ -142,13 +144,10 @@ public class GameManager : MonoBehaviour
             anim.SlideInFrom(startPos);
 
             spawnedCards.Add(newCard);
-            
         }
-
 
         isAnimatingStage = false;
     }
-
 
     void OnCardSelected(bool isCorrect)
     {
@@ -158,12 +157,10 @@ public class GameManager : MonoBehaviour
         if (isCorrect)
         {
             audioSource.PlayOneShot(correctSound);
-            //Debug.Log("Correct!");
-            currentStage++;
             StageTracker.stagesCompleted++;
 
-            // sprawdzanie czy sa stage
-            if (!StageHasData(currentStage))
+            // checking if there are stages
+            if (availableStages.Count == 0)
             {
                 StartCoroutine(VictoryRoutine());
                 return;
@@ -177,20 +174,15 @@ public class GameManager : MonoBehaviour
             hearts--;
             heartsUI.LoseHeart();
 
-            //Debug.Log("Wrong! Hearts left: " + hearts);
-
             if (hearts <= 0)
             {
-                //Debug.Log("Game Over!");
                 StartCoroutine(GameOverRoutine());
                 return;
             }
 
-            currentStage++;
             GenerateStage();
         }
     }
-
 
     void ClearOldCards()
     {
