@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public AudioClip correctSound;
     public AudioClip wrongSound;
 
+    public PauseMenu pauseMenu;
 
     public List<CardData> allCardData;
     public List<QuestionText> allQuestions;// Assign all Qxx objects here
@@ -151,6 +152,8 @@ public class GameManager : MonoBehaviour
 
     void OnCardSelected(bool isCorrect)
     {
+        if (pauseMenu.isGamePaused) return;
+
         // Count this stage as completed
         if (isCorrect)
         {
