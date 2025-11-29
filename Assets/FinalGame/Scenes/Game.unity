@@ -546,7 +546,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 972657809}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1314,6 +1314,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2555731747532317851, guid: 2ee9ad9a21d4d55438bbc07a06dd1aff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612604056949011468, guid: 2ee9ad9a21d4d55438bbc07a06dd1aff, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 972657809}
+    - target: {fileID: 3612604056949011468, guid: 2ee9ad9a21d4d55438bbc07a06dd1aff, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5227059948771503841, guid: 2ee9ad9a21d4d55438bbc07a06dd1aff, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1394,6 +1406,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5545284034913047721, guid: 2ee9ad9a21d4d55438bbc07a06dd1aff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051410490233661235, guid: 2ee9ad9a21d4d55438bbc07a06dd1aff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8840666242400176661, guid: 2ee9ad9a21d4d55438bbc07a06dd1aff, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -1408,10 +1428,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 972657810}
-  - {fileID: 535138256}
   - {fileID: 1762914290}
   - {fileID: 388104735}
   - {fileID: 799014886}
   - {fileID: 1172135634}
   - {fileID: 1319846274}
   - {fileID: 5256147606092436038}
+  - {fileID: 535138256}
