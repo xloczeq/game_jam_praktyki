@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public Card cardPrefab;
     public TextMeshPro questionPrefab;
+    public Level levelPrefab;
     public int numberOfCards = 3;
     public int hearts = 2;
     public HeartsUI heartsUI;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     private List<int> availableStages = new List<int>();
     private int currentStage;
+    private int currentLevel = 1;
 
     public string gameOverSceneName = "GameOver";
     public string victorySceneName = "Victory";
@@ -114,6 +116,10 @@ public class GameManager : MonoBehaviour
         QuestionText q = allQuestions.Find(x => x.stage == currentStage);
         if (q != null) questionPrefab.SetText(q.displayText);
 
+        // Set LEVEL text
+        levelPrefab.SetText("Poziom " + currentLevel);
+
+
         // Draw all cards for this stage
         List<CardData> stageCards = allCardData
             .Where(d => d.stage == currentStage)
@@ -151,6 +157,7 @@ public class GameManager : MonoBehaviour
 
     void OnCardSelected(bool isCorrect)
     {
+        currentLevel++;
         if (pauseMenu.isGamePaused) return;
 
         // Count this stage as completed

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b395c03b9363624c9b9779b3be60306, type: 3}
+  m_Name: Q123
+  m_EditorClassIdentifier: 
+  stage: 12
+  cardIndex: 3
+  displayText: "Twierdzi, \u017Ce Damian szed\u0142 korytarzem i nie mia\u0142 jak
+    widzie\u0107 Julii."
+  characterName: Karol
+  isCorrect: 1
+  characterPortrait: {fileID: 1931235430270329113, guid: 50e9f6cf95bd6ac4099281d707c10086, type: 3}

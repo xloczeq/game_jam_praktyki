@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b395c03b9363624c9b9779b3be60306, type: 3}
+  m_Name: Q112
+  m_EditorClassIdentifier: 
+  stage: 11
+  cardIndex: 2
+  displayText: "Twierdzi, \u017Ce przyszed\u0142 po Marcie i kart ju\u017C nie by\u0142o."
+  characterName: Daniel
+  isCorrect: 0
+  characterPortrait: {fileID: 9046443041724372418, guid: 30b4f475500e00d438d79ba204bd06a2, type: 3}
